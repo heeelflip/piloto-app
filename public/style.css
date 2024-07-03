@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+/* ESTILO MENU MOBILE */
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li a{
+  color: #00ff88;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+}
+
+li a:hover{
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#logo{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #dbdbdb;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: .5rem;
+}
+
+#menu a {
+  display: block;
+  padding: .5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+  #btn-mobile {
+      display: block;
+  }
+
+  #menu {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 70px;
+      right: 0;
+      background: #dbdbdb;
+      height: 0;
+      transition: .6s;
+      z-index: 1000;
+      visibility: hidden;
+      overflow-y: hidden;
+  }
+
+  #nav.active #menu {
+      height: calc(100vh - 70px);
+      visibility: visible;
+      overflow-y: auto;
+  }
+
+  #menu a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  #btn-mobile {
+      display: flex;
+      padding: .5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: .5rem;
+  }
+
+  #hamburger {
+      display: block;
+      border-top: 2px solid;
+      width: 20px;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: .3s;
+      position: relative;
+  }
+
+  #nav.active #hamburger {
+      border-top-color: transparent;
+  }
+
+  #nav.active #hamburger::before {
+      transform: rotate(135deg);
+
+  }
+
+  #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+  }
+}
+
+
+/* ESTILO DO TIMER */
+
+.timer-body {
+  background-color: #201b2c;
+  height: 100vh;
+}
+
+.container {
+  background-color: #2f2841;
+  width: min(90%, 500px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 4em 2em;
+  border-radius: 0.5em;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.section-container {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+.btn {
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  background-color: #201b2c;
+  color: #00ff88;
+  box-shadow: 0 10px 40px #00000056;
+}
+.btn-focus {
+  background: #00ff88;
+  
+  box-shadow: 0 10px 40px -12px #00ff8052;
+  color: #2b134b;
+}
+.time-btn-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+#time {
+  text-align: center;
+  color: #00ff88;
+  font-size: 5em;
+  font-weight: 600;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+#btn-start,
+#btn-pause {
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-color: #201b2c;
+  color: #00ff88;
+  box-shadow: 0 10px 40px #00000056;
+}
+#btn-reset {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #77ffc0;
+  font-size: 2em;
+  box-shadow: 0 10px 40px -12px #00ff8052;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+/*Estilo Login*/
+
+.main-login{
+  width: 100vw;
+  height: 100vh;
+  background: #201b2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-login{
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left-login-image{
+  width: 35vw;
+}
+.left-login > h1 {
+    font-size: 3vw;
+  color: #77ffc0;
+}
+
+.right-login{
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background: #2f2841;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px #00000056;
+}
+
+.card-login > h1 {
+  color: #00ff88;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.textfield{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.textfield > input{
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #514869;
+  color: #f0ffffde;
+  font-size: 12pt;
+  box-shadow: 0 10px 40px #00000056;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.textfield > label{
+  color: #f0ffffde;
+  margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+  color: #f0ffff94;
+}
+
+.forgot{
+  text-decoration: none;
+  color: #00ff88;
+  font-weight: 500;
+}
+
+.forgot:hover{
+  text-decoration: underline;
+}
+.login-register p{
+  color: #f0ffff94;
+}
+.login-register p a{
+  text-decoration: none;
+  color: #00ff88;
+  font-weight: 500;
+}
+.login-register p a:hover{
+  text-decoration: underline;
+}   
+
+.btn-login{
+  width: 100%;
+  padding: 16px 0;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #2b134b;
+  background: #00ff88;
+  cursor: pointer;
+  box-shadow: 0 10px 40px -12px #00ff8052;
+}
+
+
+
+@media only screen and (max-width: 950px){
+  .card-login{
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .main-login{
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .left-login > h1 {
+    display: none;
+  }
+
+  .left-login{
+    width: 100%;
+    height: auto;
+  }
+
+  .right-login{
+    width: 100%;
+    height: auto;
+  }
+
+  .left-login-image{
+    width: 50vw;
+  }
+
+  .card-login{
+    width: 90%;
+    margin-bottom: 30px;
+  }
+}
+

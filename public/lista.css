@@ -1,0 +1,121 @@
+/* ESTILO LISTA DE TAREFAS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    background: #201b2c;
+    padding: 10px;
+  }
+  
+  .todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #2f2841;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+  }
+  
+  .todo-app h2 {
+    color: #00ff88;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #514869;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  
+  input[type="text"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f0ffffde;
+    font-size: 1rem;
+    width: 60%;
+    padding: 10px;
+  }
+  
+  input::placeholder {
+    color: #f0ffffde;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    padding: 16px 20px;
+    background: #201b2c;
+    box-shadow: 0 10px 40px #3d3d3d52;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+.list li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #77ffc0;
+  }
+  
+  .list li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+  }
+  
+  .list li.checked {
+    color: #ff5945;
+    text-decoration: line-through;
+  }
+  
+.list li.checked::before {
+    background-image: url(images/checked.png);
+  }
+.list li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  
+.list li span:hover {
+    background: #edeef0;
+  }
+  

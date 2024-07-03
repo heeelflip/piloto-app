@@ -1,0 +1,55 @@
+<!DOCTYPE html
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="public/style.css" />
+    <link rel="stylesheet" href="menu-mobile.css">
+  </head>
+  <body class="timer-body">
+
+    <!-- Header -->
+    <header id="header">
+      <a id="logo" href="#" class="logo"><img src="public/images/logo.png" alt=""></a>
+      <nav id="nav">
+          <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+              <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+              <li><a href="todolist.html">Tarefas</a></li>
+              <li><a href="timer.html">Foco</a></li>
+              <li><a href="#">Contato</a></li>
+              <li><a href="login.html">Login</a></li>
+          </ul>
+      </nav>
+  </header>
+
+    <!-- Timer -->
+    <div class="container">
+      <div class="section-container">
+        <button id="focus" class="btn btn-timer btn-focus">Foco</button>
+        <button id="shortbreak" class="btn btn-shortbreak">Pausa Curta</button>
+        <button id="longbreak" class="btn btn-longbreak">Pausa Longa</button>
+      </div>
+      <div class="time-btn-container">
+        <span id="time"></span>
+        <div class="btn-container">
+          <button id="btn-start" class="show">Começar</button>
+          <button id="btn-pause" class="hide">Pausar</button>
+          <button id="btn-reset" class="hide">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
