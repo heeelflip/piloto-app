@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça parte do nosso time<br>Crie sua conta!</h1>
+            <img src="/images/registro.svg" class="left-login-image" alt="relogio">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Registre-se</h1>
+
+                <form action="/registrar" method="post" class="formulario">
+
+                    <div class="textfield">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" name="usuario" placeholder="Usuário" required>
+                    </div>
+
+                    <div class="textfield">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha" required>
+                    </div>
+
+                    <button type="submit" class="btn-login">Criar conta</button>
+                    
+                    <div class="login-register">
+                        <p>Já tem uma conta?<a href="http://localhost:8081/" class="register-link"> Faça login</a></p>
+                    </div>
+            
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+   <script src="public/index.js"></script>
+</body>
+</html>
